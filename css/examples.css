@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: iransans;
+    direction: rtl;
+  }
+  @font-face {
+    font-family: "Trickster";
+    src: url("/iransans/ir_sans.ttf") url("/iransans/IRANSans\(FaNum\).ttf");
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 25px;
+    text-align: justify;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+.nav-tabs .active{
+background-color: #41ccf8 !important;
+color: #ffffff !important;
+}

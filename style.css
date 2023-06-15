@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: iransans !important
+    ;
+    direction: rtl;
+  }
+  @font-face {
+    font-family: "iransans";
+    src: url("./iransans/ir_sans.ttf") url("./iransans/IRANSans\(FaNum\).ttf");
+  }
+  a {
+    text-decoration: none !important;
+    color: #fff;
+  }
+  .see-more-btn2 {
+    border: none;
+    color: #000000;
+    font-size: 12px;
+    background: #2CD095;
+    padding: 10px 20px;
+  }
+  .background-head{
+    background: rgb(84,63,150);
+    background: -moz-linear-gradient(301deg, rgba(84,63,150,1) 0%, rgba(9,7,27,1) 17%);
+    background: -webkit-linear-gradient(301deg, rgba(84,63,150,1) 0%, rgba(9,7,27,1) 17%);
+    background: linear-gradient(301deg, rgba(84,63,150,1) 0%, rgba(9,7,27,1) 17%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#543f96",endColorstr="#09071b",GradientType=1);
+  }
+  .background-top{
+    background: rgb(84,63,150);
+    background: -moz-linear-gradient(205deg, rgba(84,63,150,0.9612219887955182) 3%, rgba(9,7,27,1) 17%);
+    background: -webkit-linear-gradient(205deg, rgba(84,63,150,0.9612219887955182) 3%, rgba(9,7,27,1) 17%);
+    background: linear-gradient(205deg, rgba(84,63,150,0.9612219887955182) 3%, rgba(9,7,27,1) 17%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#543f96",endColorstr="#09071b",GradientType=1);
+  }

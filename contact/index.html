@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تماس با ما</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <main>
+      <section class="mt-5">
+        <div class="container" style="max-width: 1200px">
+          <div class="mt-5">
+            <h1 class="text-center fw-bold" style="font-size: 24px">
+              تماس باما
+            </h1>
+          </div>
+          <div class="mt-5">
+            <p style="text-align: justify; line-height: 35px">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای چنین مسائل و شرایط فعلی
+              تکنولوژی است. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+              صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+              روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای چنین مسائل
+              و شرایط فعلی تکنولوژی است.لورم ایپسوم متن ساختگی با تولید سادگی
+              نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.
+            </p>
+          </div>
+
+          <div class="p-5" style="box-shadow: 4px 3px 47px 0px #0000001a">
+            <form>
+              <div class="row justify-content-between">
+                <div class="col-sm-6 mb-4">
+                  <input
+                    style="
+                      border: 2px solid #e3e3e3;
+
+                      color: #1e1e1e;
+                    "
+                    class="w-100 p-3"
+                    placeholder="موضوع پروژه"
+                  />
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <input
+                    style="
+                      border: 2px solid #e3e3e3;
+
+                      color: #1e1e1e;
+                    "
+                    class="w-100 p-3"
+                    placeholder="نام و نام خانوادگی"
+                  />
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <input
+                    style="
+                      border: 2px solid #e3e3e3;
+
+                      color: #1e1e1e;
+                    "
+                    class="w-100 p-3"
+                    placeholder="آدرس ایمیل"
+                  />
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <input
+                    style="
+                      border: 2px solid #e3e3e3;
+
+                      color: #1e1e1e;
+                    "
+                    class="w-100 p-3"
+                    placeholder="شماره تلفن"
+                  />
+                </div>
+                <div class="col-12 mb-3">
+                  <textarea
+                    placeholder="متن پیام"
+                    class="w-100 p-3"
+                    style="
+                      border: 2px solid #e3e3e3;
+                      resize: none;
+                      color: #1e1e1e;
+
+                      min-height: 165px;
+                    "
+                  ></textarea>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                  <input
+                    type="submit"
+                    value="ارسال پیام"
+                    style="
+                      color: #000000;
+                      background-color: #2cd095;
+                      height: 50px;
+                      min-width: 137px;
+
+                      border: none;
+                    "
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="w-100 my-5 p-1"
+            id="map"
+            style="
+              height: 206px;
+              border: 7px solid #ffffff;
+              box-shadow: 4px 4px 56px 0px #0000001a;
+            "
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script>
+      var mymap = L.map("map").setView([50, 35], 17);
+
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        minZoom: 3,
+      }).addTo(mymap);
+      var circle = L.circle([50, 35], {
+        color: "blue",
+        fillColor: "blue",
+        fillOpacity: 0.2,
+        radius: 10,
+      }).addTo(mymap);
+      var marker = L.marker([50, 35]).addTo(mymap);
+      marker.bindPopup("<b>بیمه دانا</b>").openPopup();
+    </script>
+  </body>
+</html>
